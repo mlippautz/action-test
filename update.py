@@ -67,5 +67,6 @@ for branch in BRANCHES_FORCE_BUILDS:
     run('rsync', '--itemize-changes', '--recursive',
             '--checksum', f'{source}{os.sep}', f'{branch_dir}{os.sep}')
     run('git', 'add', branch_dir)
+    run('ls', '-al')
 
 
