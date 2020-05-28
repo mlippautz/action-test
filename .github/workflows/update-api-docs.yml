@@ -13,9 +13,9 @@ jobs:
     steps:
       - name: Checkout API repo
         uses: actions/checkout@v2
-#      - name: Install dependencies
-#        run: |
-#          sudo apt-get install doxygen graphviz fonts-freefont-ttf git rsync      
+      - name: Install dependencies
+        run: |
+          apk add doxygen graphviz ttf-freefont git rsync
 
 #      - name: Generate documentation
 #        uses: ./.github/actions/docker-doxygen
