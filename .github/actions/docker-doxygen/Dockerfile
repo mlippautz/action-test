@@ -4,7 +4,7 @@ FROM python:3.7-alpine
 COPY update.py /update.py
 
 # Deps.
-RUN apk add doxygen graphviz ttf-freefont
+RUN apk add doxygen graphviz ttf-freefont git rsync
 
 # Start executing at entrypoint.
 CMD ["python", "/update.py"]
