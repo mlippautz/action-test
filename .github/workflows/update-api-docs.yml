@@ -6,7 +6,7 @@ on: push
 
 jobs:
   build:
-    name: Build and update
+    name: Build and update documentation
     runs-on: ubuntu-latest
     container:
       image: docker://python:3.7-alpine
@@ -19,9 +19,6 @@ jobs:
       - name: Build docs
         run: |
           python update.py
-
-#      - name: Generate documentation
-#        uses: ./.github/actions/docker-doxygen
       - name: Commit and push
         run: |
           git config --global user.name "V8 API docs updater"
