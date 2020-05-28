@@ -44,7 +44,7 @@ BRANCHES.sort(key=lambda branch: list(map(int, branch.split('-')[0].split('.')))
 BRANCHES.append('lkgr')
 
 # List of branches that have potential back-merges and thus need updates:
-BRANCHES_FORCE_BUILDS = set(BRANCHES[-4:])
+BRANCHES_FORCE_BUILDS = set(BRANCHES[-2:])
 print(BRANCHES_FORCE_BUILDS)
 
 for branch in BRANCHES_FORCE_BUILDS:
@@ -67,6 +67,6 @@ for branch in BRANCHES_FORCE_BUILDS:
     run('rsync', '--itemize-changes', '--recursive',
             '--checksum', f'{source}{os.sep}', f'{branch_dir}{os.sep}')
     run('git', 'add', branch_dir)
-    run('ls', '-al')
+    run('ls', '-al', capture=True)
 
 
