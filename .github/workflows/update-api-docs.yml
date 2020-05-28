@@ -9,7 +9,8 @@ jobs:
     name: Build and update
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Checkout V8, create documentation, and push changes
+      - name: Checkout API repo
+        uses: actions/checkout@v2
+      - name: Generate documentation
         uses: ./.github/actions/docker-doxygen
 
