@@ -2,4 +2,4 @@
 
 echo "Hello world!"
 
-exit 0
+python update.py
