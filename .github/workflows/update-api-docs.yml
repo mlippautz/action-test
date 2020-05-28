@@ -6,7 +6,7 @@ on: push
 
 jobs:
   build:
-    name: Build and update documentation
+    name: Build and update docs
     runs-on: ubuntu-latest
     container:
       image: docker://python:3.7-alpine
