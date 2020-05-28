@@ -16,12 +16,15 @@ jobs:
       - name: Install dependencies
         run: |
           apk add doxygen graphviz ttf-freefont git rsync
+      - name: Build docs
+        run: |
+          python update.py
 
 #      - name: Generate documentation
 #        uses: ./.github/actions/docker-doxygen
-#      - name: Commit and push
-#        run: |
-#          git config --global user.name "V8 API docs updater"
-#          git config --global user.email "v8-dev+api@googlegroups.com"
-#          git commit -am "Automated docs build."
-#          git push
+      - name: Commit and push
+        run: |
+          git config --global user.name "V8 API docs updater"
+          git config --global user.email "v8-dev+api@googlegroups.com"
+          git commit -am "Automated docs build."
+          git push
