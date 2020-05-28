@@ -6,7 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY update.py /update.py
 
 # Deps.
-RUN apk add doxygen graphviz ttf-freefont
+RUN apk add doxygen graphviz ttf-freefont python
 
 # Start executing at entrypoint.
 ENTRYPOINT ["/entrypoint.sh"]
