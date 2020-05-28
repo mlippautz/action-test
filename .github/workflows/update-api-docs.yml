@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/docker-doxygen
+      - name: Checkout V8, create documentation, and push changes
+        uses: ./.github/actions/docker-doxygen
 
