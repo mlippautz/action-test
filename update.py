@@ -45,7 +45,7 @@ BRANCHES.append('lkgr')
 
 # List of branches that have potential back-merges and thus need updates:
 BRANCHES_FORCE_BUILDS = set(BRANCHES[-4:])
-prin(BRANCHES_FORCE_BUILDS)
+print(BRANCHES_FORCE_BUILDS)
 
 for branch in BRANCHES_FORCE_BUILDS:
     step(f'Generating docs for branch: {branch}')
