@@ -7,5 +7,8 @@ FROM python:3.7-alpine
 RUN apk add doxygen graphviz ttf-freefont git rsync
 
 # Start executing at entrypoint.
-CMD ["python", "$GITHUB_WORKSPACE/update.py" ]
+#CMD ["python", "$GITHUB_WORKSPACE/update.py" ]
+ENTRYPOINT ["ls -al"]
+
+
 
