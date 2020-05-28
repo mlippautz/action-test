@@ -7,5 +7,5 @@ COPY update.py /update.py
 #RUN apk add doxygen graphviz ttf-freefont
 
 # Start executing at entrypoint.
-CMD ["python", "/update.py"]
+#CMD ["python", "/update.py"]
 
