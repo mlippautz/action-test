@@ -8,7 +8,7 @@ RUN apk add doxygen graphviz ttf-freefont git rsync
 
 # Start executing at entrypoint.
 #CMD ["python", "$GITHUB_WORKSPACE/update.py" ]
-ENTRYPOINT ["ls -al"]
+CMD ["ls" "-al"]
 
 
 
