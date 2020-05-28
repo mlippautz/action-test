@@ -3,4 +3,5 @@ description: 'Execute a python script in a Docker container'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-
+  args:
+    - '../../../update.py'
