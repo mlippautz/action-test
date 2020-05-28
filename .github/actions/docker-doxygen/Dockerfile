@@ -5,7 +5,7 @@ FROM alpine:edge
 COPY entrypoint.sh /entrypoint.sh
 
 # Deps.
-RUN apk add doxygen graphviz ttf-freefont python
+RUN apk add doxygen graphviz ttf-freefont
 
 # Start executing at entrypoint.
 ENTRYPOINT ["/entrypoint.sh"]
